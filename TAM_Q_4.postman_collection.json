@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "530ae035-6f63-4629-a783-ea4960404acd",
+		"name": "TAM_Q_4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7805909",
+		"_collection_link": "https://dark-star-35596.postman.co/workspace/PRUEBA~8fb2ca4f-f961-410e-8bce-78b7128f227b/collection/7805909-530ae035-6f63-4629-a783-ea4960404acd?action=share&creator=7805909&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Example URL Request",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \n       \"to\": \"573103962808\",\n       \"text\": \"Mensaje de prueba, esta es una url: SHORTURL\",\n       \"customdata\": \"CUS_ID_0125\",\n       \"isPremium\": false,\n       \"isFlash\": false,\n       \"isLongmessage\": false,\n       \"isRandomRoute\": false,\n       \"shortUrlConfig\": {\n              \"url\": \"https://www.youtube.com\",\n              \"domainShorturl\": \"http://ma.sv/\"\n       }\n }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-sms.masivapp.com/send-message",
+					"protocol": "https",
+					"host": [
+						"api-sms",
+						"masivapp",
+						"com"
+					],
+					"path": [
+						"send-message"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example URL Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n       \n       \"to\": \"573103962808\",\n       \"text\": \"Mensaje de prueba, esta es una url: SHORTURL\",\n       \"customdata\": \"CUS_ID_0125\",\n       \"isPremium\": false,\n       \"isFlash\": false,\n       \"isLongmessage\": false,\n       \"isRandomRoute\": false,\n       \"shortUrlConfig\": {\n              \"url\": \"https://www.youtube.com\",\n              \"domainShorturl\": \"http://ma.sv/\"\n       }\n }\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-sms.masivapp.com/send-message",
+							"protocol": "https",
+							"host": [
+								"api-sms",
+								"masivapp",
+								"com"
+							],
+							"path": [
+								"send-message"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 16 May 2023 01:52:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"statusMessage\": \"Invalid credentials.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "https://api.masiv.masivian.com/email/v1/delivery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ZGVtbzpwQDU1dzByZA==",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Username",
+						"value": "apikey",
+						"type": "text"
+					},
+					{
+						"key": "Password",
+						"value": "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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Subject\": \"Mail Subject\",\n  \"From\": \"Contact<carlosluna85@homail.com\",\n  \"Template\": {\n    \"Type\": \"text/html\",\n    \"Value\": \"<div><img src='https://masiv.com/wp-content/uploads/2023/01/BannerHomeDesk.jpg' alt='Imagen de ejemplo'><input type='text' name='campo' placeholder='Ingrese texto aquí'><button type='button'>Enviar</button></div>\"\n  },\n  \"ReplyTo\": \"carlosluna85@hotmail.com\",\n  \"Recipients\": [\n    {\n      \"To\": \"Juan Andrade<carlosluna85@gmail.com>\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "smtp.sendgrid.net",
+					"host": [
+						"smtp",
+						"sendgrid",
+						"net"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
